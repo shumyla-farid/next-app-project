@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 export default async function ReviewPage({
   params,
@@ -11,6 +11,6 @@ export default async function ReviewPage({
       Review Page {reviewId} for Product {productId}
     </h1>
   ) : (
-    notFound()
+    redirect("/")
   );
 }
